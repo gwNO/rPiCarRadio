@@ -12,6 +12,7 @@ export class GpsService {
   private _direction: BehaviorSubject<any> = new BehaviorSubject(null);
 
   constructor() {
+    this.getInitialState();
     const listener = new gpsd.Listener({
       port: 2947,
       hostname: 'localhost',
@@ -50,4 +51,11 @@ export class GpsService {
     return brng;
   }
 
+  getInitialState() {
+    // TODO: Get last state from mongoDB
+    this._direction.next(0);
+    this._lat.next(47.059627);
+    this._lon.next(-1.725579);
+    this._speed.next(0);
+  }
 }
