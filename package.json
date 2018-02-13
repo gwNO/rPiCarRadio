@@ -1,7 +1,7 @@
 {
   "name": "r-pi-car-radio",
   "version": "0.0.0",
-  "license": "MIT",
+  "license": "Beerware",
   "scripts": {
     "ng": "ng",
     "start": "webpack-dev-server --port=4200",
