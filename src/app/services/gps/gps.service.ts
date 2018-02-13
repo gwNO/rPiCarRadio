@@ -58,4 +58,17 @@ export class GpsService {
     this._lon.next(-1.725579);
     this._speed.next(0);
   }
+
+  get lon() {
+    return this._lon.asObservable();
+  }
+  get lat() {
+    return this._lat.asObservable();
+  }
+  get speed() {
+    return this._speed.asObservable();
+  }
+  get direction() {
+    return this._direction.asObservable();
+  }
 }

@@ -1,0 +1,23 @@
+<aol-map class="h-100 w-100">
+  <aol-interaction-default></aol-interaction-default>
+  <aol-view zoom="17" constrainRotation=false>
+    <aol-coordinate [y]="lat" [x]="lon" [srid]="'EPSG:4326'"></aol-coordinate>
+  </aol-view>
+  <aol-layer-tile>
+    <aol-source-osm></aol-source-osm>
+  </aol-layer-tile>
+  <aol-layer-vector>
+    <aol-source-vector>
+      <aol-feature>
+        <aol-geometry-point>
+          <aol-coordinate [x]="lon" [y]="lat" [srid]="'EPSG:4326'"></aol-coordinate>
+        </aol-geometry-point>
+        <aol-style>
+          <aol-style-icon [src]="'assets/icons/navIcon.png'" rotateWithView="true" [anchor]="[0.5, 0.5]" [anchorXUnits]="'fraction'"
+            [anchorYUnits]="'fraction'" [scale]="0.1" [anchorOrigin]="'top-left'">
+          </aol-style-icon>
+        </aol-style>
+      </aol-feature>
+    </aol-source-vector>
+  </aol-layer-vector>
+</aol-map>
