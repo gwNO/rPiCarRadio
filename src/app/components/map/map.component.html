@@ -1,12 +1,13 @@
 <aol-map class="h-100 w-100">
   <aol-interaction-default></aol-interaction-default>
-  <aol-view zoom="17" constrainRotation=false>
+  <aol-view zoom="18" constrainRotation=false>
     <aol-coordinate [y]="lat" [x]="lon" [srid]="'EPSG:4326'"></aol-coordinate>
   </aol-view>
-  <aol-layer-tile>
+  <aol-layer-tile zIndex="1">
     <aol-source-osm></aol-source-osm>
   </aol-layer-tile>
-  <aol-layer-vector>
+
+  <aol-layer-vector zIndex="100">
     <aol-source-vector>
       <aol-feature>
         <aol-geometry-point>
